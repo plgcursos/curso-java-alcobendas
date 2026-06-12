@@ -1,0 +1,67 @@
+java	permite ejecutar un programa java
+javac	es el compilador java
+
+Compilar:
+	javac MiClase.java		>>>    (genera) MiClase.class
+Ejecutar:
+	java MiClase
+
+Ejemplo de Clase:
+
+public class MiClase {
+	public static void main(String[] arg) {
+		// codigo
+	}
+}
+El nombre del fichero debe ser igual al de la clase con la extensión .java
+
+OPERADORES
+
+ARITMÉTICOS
+	+	-	*	/	%
+
+RELACIONALES
+	>	>=	<	<=	==	!=
+	
+LOGICOS
+	&&	||	!
+	
+
+Escribir en consola
+	System.out.println("lo que sea");   // muestra lo que sea y un salto de linea al final
+	System.out.print("lo que sea"); 	// muestra lo que sea y el cursor queda al final de esa línea
+
+Cadenas en java(comillas dobles):
+	"cadena"
+	Para concatenar cadenas +		ej:		"Hola " + "que tal?"   >> "Hola que tal?"
+	
+Para leer desde el teclado:
+	Usamos la clase java.util.Scanner (ver ejemplo T02LeerDatos)
+
+Tipos de datos:
+	int  (números enteros)
+	char (caracter)
+	double (números reales)
+
+Funciones matemáticas (están en la clase java.lang.Math):
+
+Math.PI		constante con el valor de pi
+Math.pow(base, exp)		devuelve la potencia: base ^ exp
+Math.sqrt(valor)		devuelve la raíz cuadrada de valor
+
+Estructuras de control:
+	Condicional simple:
+	if(<expr.lógica>){
+		// código si <expr.lógica> es verdadera
+	}
+	
+	Condicional doble:
+	if(<expr.lógica>) {
+		// código si <expr.lógica> es verdadera
+	} else {
+		// código si <expr.lógica> es falsa
+	}
+	
+	
+
+		
