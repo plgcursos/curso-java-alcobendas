@@ -1,0 +1,19 @@
+#!/bin/bash
+
+read -p "Introduce una opcion: " op
+
+case $op in
+1)
+  echo "Elegiste la opcion 1"
+  ;;
+2)
+  echo "Elegiste la opcion 2"
+  ;;
+3)
+  echo "Elegiste la opcion 3"
+  ;;
+*)
+  echo "Opcion invalida"
+  ;;
+esac
+

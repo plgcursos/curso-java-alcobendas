@@ -1,0 +1,36 @@
+Especificaciones Técnicas
+
+Cimentación:
+	•	Excavación de 1.5 metros de profundidad para zapatas.
+	•	Uso de hormigón armado con resistencia de 250 kg/cm².
+	•	Implementación de muros de contención de bloque estructural.
+
+Estructura:
+	•	Pórticos de hormigón armado con columnas y vigas reforzadas.
+	•	Losas de concreto con aislante térmico incorporado.
+	•	Refuerzos según norma ACI 318 y recomendaciones sísmicas.
+
+Cubierta y Techo:
+	•	Estructura metálica galvanizada para soporte de techumbre.
+	•	Cubierta de teja cerámica con aislante térmico y acústico.
+	•	Canalización de aguas pluviales mediante sistema de drenaje integrado.
+
+Instalaciones:
+	•	Eléctrica: 
+		o	Sistema de cableado tipo THHN con certificación de seguridad.
+		o	Tablero eléctrico con protección diferencial y breakers sectorizados.
+		o	Preinstalación para paneles solares.
+	•	Sanitaria: 
+		o	Tuberías de PVC de alta resistencia para aguas residuales.
+		o	Sistema de almacenamiento y distribución de agua potable en tuberías de cobre.
+		o	Instalación de biodigestor ecológico para aguas grises.
+	•	Gas: 
+		o	Red de tuberías de polietileno de alta densidad.
+		o	Sistema de ventilación y seguridad para fugas.
+		o	Certificación y pruebas de hermeticidad.
+		
+Acabados:
+	•	Pisos de porcelanato en áreas sociales y cerámica antideslizante en baños.
+	•	Paredes con estuco y pintura lavable de alta calidad.
+	•	Ventanas de aluminio anodizado con doble vidrio para aislamiento térmico.
+	•	Puertas interiores de madera maciza y puerta principal reforzada.

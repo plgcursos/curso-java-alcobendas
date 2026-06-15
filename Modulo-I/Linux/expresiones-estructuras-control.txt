@@ -1,0 +1,86 @@
+Evaluación de expresiones:
+[ <exp_lógica> ]
+
+Evaluación de ficheros:
+Operadores:
+[ <operador> <fichero> ]
+-f   Verdadero si el fichero existe y es un fichero regular		[ -f $HOME/mi_fichero.txt ]
+-s   Verdadero si el fichero existe y el tamaño es > 0
+-r   Verdadero si el fichero existe y tiene permiso de lectura
+-w    "   escritura
+-x    "   ejecución
+-d   Verdadero si es un directorio
+
+Otros operadores:
+-o   OR
+-a   AND
+!    NOT
+Agrupar expresión con paréntesis:   \(<exp>\)                 [ \(-f $HOME/mi_fichero.txt -o -d $HOME/mi_carpeta \) -a… ]
+
+-lt   Less Than     	menor que
+-gt   Greater Than  	mayor que
+-le   Less or Equal 	menor o igual
+-ge   Greater or Equal	mayor o igual
+-eq   Equal		igual
+-ne   Not Equal		distinto
+
+
+ESTRUCTURAS DE CONTROL
+if [ <condicion> ]
+then
+   <instr.>
+fi
+
+if [ <condicion> ]
+then
+   <instr.>
+else
+   <instr.>
+fi
+
+if [ <condicion> ]
+   ...
+elif [ <condicion> ]
+   ...
+elif [ <condicion> ]
+   ...
+else
+   ...
+fi
+
+case <variable> in
+1)
+  <instr.>
+  ;;
+2)
+  <instr.>
+  ;;
+3)
+  <instr.>
+  ;;
+4)
+  <instr.>
+  ;;
+5)
+  <instr.>
+  ;;
+*)
+  <instr.>
+  ;;
+esac
+
+while [ <condicion> ]
+do
+  …
+done
+
+until [ <condicion> ]
+do
+  ...
+done
+
+for <var> in {n1..n2}
+do
+  ...
+done
+

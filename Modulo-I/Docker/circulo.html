@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej02</title>
+<style>
+    *{
+  font-family: Helvetica, Arial;
+}
+
+#cont{
+  margin: 50px auto;
+  width: 75%;
+  text-align: center;
+}
+
+h1, #datos{
+  margin: 20 px auto;
+}
+
+h1 {
+  color: darkblue;
+}
+
+input {
+  width: 70px;
+}
+
+</style>
+<script>
+let input_radio;
+let span_area;
+let span_perimetro;
+
+function calcula() {
+    let radio = input_radio.value;
+    let area = Math.PI * radio * radio;
+    let perimetro = 2 * Math.PI * radio;
+    span_area.textContent="Area: " + area;
+    span_perimetro.textContent="Perimetro: " + perimetro;
+}
+
+window.onload = function(){
+    input_radio = document.getElementById("radio");
+    document.getElementById("calcula").addEventListener("click", calcula);
+    span_area = document.getElementById("area");
+    span_perimetro = document.getElementById("perimetro");
+};
+</script>
+</head>
+<body>
+    <div id="cont">
+        <h1>AREA Y PERIMETRO DEL CIRCULO</h1>
+        <div id="datos">
+            <label for="radio">Radio</label>
+            <input name="radio" id="radio">
+            <button id="calcula">Calcula</button>
+            <p><span id="area"></span></p>
+            <p><span id="perimetro"></span></p>
+        </div>
+    </div>
+</body>
+</html>

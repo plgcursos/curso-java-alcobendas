@@ -1,0 +1,52 @@
+# **Presentación del Proyecto de Construcción de Vivienda**
+
+## **1. Datos Generales**
+- **Proyecto:** Construcción de Vivienda Unifamiliar
+- **Ubicación:** Calle Los Pinos, Nº 123, Ciudad
+- **Fecha de Inicio:** 15 de marzo de 2025
+- **Fecha Estimada de Finalización:** 15 de diciembre de 2025
+- **Responsable:** Ing. Juan Pérez
+- **Presupuesto Estimado:** $120,000
+
+## **2. Objetivos del Proyecto**
+- Construcción de una vivienda de 150 m² con diseño moderno y eficiente.
+- Cumplir con las normativas locales de edificación y sostenibilidad.
+- Optimizar costos sin afectar la calidad de los materiales y acabados.
+- Garantizar la entrega en el plazo establecido.
+
+## **3. Fases del Proyecto**
+1. **Diseño y Planificación (Marzo - Abril)**
+   - Elaboración de planos y obtención de permisos.
+2. **Preparación del Terreno (Mayo)**
+   - Desmonte, nivelación y compactación del suelo.
+3. **Cimentación y Estructura (Junio - Agosto)**
+   - Construcción de cimientos, columnas y vigas.
+4. **Instalaciones Eléctricas y Sanitarias (Septiembre - Octubre)**
+   - Instalación de cableado, tuberías y sistema de gas.
+5. **Acabados y Entrega Final (Noviembre - Diciembre)**
+   - Pintura, colocación de pisos y detalles finales.
+
+## **4. Especificaciones Técnicas**
+- **Estructura:** Hormigón armado según norma ACI 318.
+- **Cubierta:** Tejas cerámicas con aislamiento térmico.
+- **Pisos:** Porcelanato en áreas sociales y cerámica en baños.
+- **Ventanas:** Aluminio con vidrio templado.
+- **Instalaciones:**
+  - **Eléctrica:** Cableado THHN con protección diferencial.
+  - **Sanitaria:** PVC para aguas residuales y cobre para agua potable.
+  - **Gas:** Polietileno de alta densidad.
+
+## **5. Estado Actual del Proyecto**
+- Avance general: **70%** (actualizado al 20 de octubre de 2025).
+- Instalaciones eléctricas y sanitarias **90% completadas**.
+- Próximas tareas: instalación de carpintería, pintura y detalles finales.
+
+## **6. Beneficios del Proyecto**
+- Diseño moderno y eficiente.
+- Uso de materiales de alta calidad y sostenibilidad.
+- Garantía de cumplimiento de normativas.
+- Incremento en el valor de la propiedad.
+
+## **7. Conclusión**
+Este proyecto de construcción de vivienda unifamiliar representa una oportunidad de inversión segura y eficiente, garantizando calidad, diseño y cumplimiento de plazos. Se espera la entrega dentro del tiempo estipulado y sin sobrecostos significativos.
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+resu1=$[10/2-1]
+echo $resu1
+
+resu2=`expr 7 / 2`
+echo $resu2

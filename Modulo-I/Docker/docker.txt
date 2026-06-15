@@ -1,0 +1,48 @@
+DOCKER
+
+docker run    Crear un nuevo contenedor
+
+Ejemplos:
+docker run -d --name nginx -p 8080:80 -v ~/nginx-html:/usr/share/nginx/HTML nginx
+
+"nginx"
+docker run 
+	-d (segundo plano) 
+	--name nginx (nombre contenedor)
+	-p 8080:80  (redirecciona el puerto 80 del contenedor al 8080 del anfitrión)
+	-v ~/nginx-html:/usr/share/nginx/html (crea un volumen en el anfitrión en "~/nginx-html" sincronizado con la carpeta 
+	   "/usr/share/nginx/HTML" del contenedor
+	nginx (nombre de la imagen, debe ser <nombre>:<tag>, si se omite <tag>, asume latest)
+
+"tomcat"
+docker run -d --name tomcat -p 8088:8080 -v ~/tomcat-html:/usr/local/tomcat/webapps/mi-web tomcat:11.0-jre17-temurin-noble
+
+"mysql"
+docker run -d --name mysql8 -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -v ~/mysql-db:/var/lib/mysql mysql:8.0
+
+	-e (crea una variable de entorno)
+
+
+docker image ls (lista imágenes locales)
+
+docker container ls	docker ps     (listar contenedores en ejecución)
+docker container ls -a	docker ps -a  (listar todos los contenedores)
+
+docker start <cont> (enciende un contenedor)
+docker stop <cont> (detiene un contenedor)
+
+docker exec <comando>  (ejecuta comandos en el contenedor)
+ej:
+docker exec -u root <contenedor> mkdir /home/algo
+
+docker exec -it <contenedor> /bin/bash
+	-it (terminal interactiva)
+
+docker rm <contenedor> (elimina un contenedor detenido)
+docker rm -f <contenedor> (fuerza la detención de un contenedor en ejecución antes de eliminarlo)
+
+docker image rm <imagen>    docker rmi <imagen>   (elimina imagenes)
+
+docker logs <contenedor> (muestra los logs de un contenedor en ejecución)
+
+docker inspect <contenedor> (muestra información del contenedor)

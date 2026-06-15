@@ -1,0 +1,34 @@
+En Windows / VMWare
+1- Apagar la VM
+2- En VMWare, con la máquina seleccionada
+	- Menú VM > Configuración
+	- Solapa (tab) Opciones
+	- Carpetas Compartidas
+		- Marcar siempre habilitado
+		- Agregar... y elegir la carpeta
+
+En Debian
+1- Instalar VMware Tools
+sudo apt update
+sudo apt install -y open-vm-tools open-vm-tools-desktop fuse3
+sudo systemctl enable --now open-vm-tools.service
+
+2- Montar la carpeta compartida
+sudo mkdir -p /mnt/hgfs
+sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+
+3- Comprobar
+ls -la /mnt/hgfs (deben aparecer la carpeta compartida)
+
+4- Para que el montaje sea automático
+editar /etc/fstab  y agregar la línea
+.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other,defaults 0 0
+
+editar /etc/fuse.conf
+buscar la linea
+#user_allow_other
+y descomentar (borrar #)
+user_allow_other
+
+5 - reiniciar y debería funcionar ok
+sudo reboot

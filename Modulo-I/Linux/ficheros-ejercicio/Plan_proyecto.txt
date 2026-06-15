@@ -1,0 +1,48 @@
+Plan de Proyecto
+
+Proyecto: Construcción de Vivienda Unifamiliar 
+Ubicación: Calle Los Pinos, Nº 123, Madrid
+Fecha de Inicio: 15 de marzo de 2025 
+Fecha Estimada de Finalización: 15 de diciembre de 2025 
+Responsable: Ing. Juan Pérez
+
+Objetivos del Proyecto:
+	•	Construcción de una vivienda unifamiliar de 150 m² con diseño moderno y eficiente.
+	•	Cumplimiento estricto de normativas de edificación y sostenibilidad.
+	•	Optimización de costos mediante la selección de materiales adecuados y planificación eficiente.
+	•	Implementación de tecnologías ecoamigables para eficiencia energética y ahorro de recursos.
+	•	Garantizar la seguridad y ergonomía en la construcción y uso final de la vivienda.
+	•	Supervisión continua de la obra para minimizar riesgos y retrasos.
+Fases del Proyecto:
+	1.	Diseño y planificación (Marzo - Abril) 
+		o	Elaboración de planos arquitectónicos, estructurales y de instalaciones.
+		o	Definición de materiales y selección de proveedores.
+		o	Obtención de permisos y aprobación de normativas urbanísticas.
+		o	Estudio de impacto ambiental y social del proyecto.
+	2.	Preparación del terreno (Mayo) 
+		o	Limpieza y nivelación del terreno.
+		o	Construcción de cercado perimetral temporal para protección.
+		o	Instalación de accesos provisionales para maquinaria y trabajadores.
+		o	Estudio geotécnico para garantizar estabilidad del suelo.
+	3.	Cimentación y estructura (Junio - Agosto) 
+		o	Excavación de zapatas y construcción de cimentaciones.
+		o	Levantamiento de estructura de hormigón armado y montaje de vigas y columnas.
+		o	Implementación de sistemas de drenaje pluvial y sanitario.
+		o	Revisión de calidad y pruebas estructurales.
+	4.	Instalaciones eléctricas y sanitarias (Septiembre - Octubre) 
+		o	Instalación de cableado eléctrico con protección diferencial.
+		o	Montaje de tuberías sanitarias, desagües y acometidas.
+		o	Implementación de sistema de climatización y ventilación.
+		o	Pruebas de funcionamiento y certificaciones.
+	5.	Acabados y entrega final (Noviembre - Diciembre) 
+		o	Instalación de pisos y revestimientos interiores y exteriores.
+		o	Colocación de carpintería, puertas, ventanas y mobiliario fijo.
+		o	Pintura y acabados finales.
+		o	Limpieza profunda y preparación para la entrega al propietario.
+
+Presupuesto Aproximado:
+•	Materiales de construcción: 60.000
+•	Mano de obra: 40.000
+•	Permisos y certificaciones: 5.000
+•	Imprevistos: 15.000
+•	Total estimado: 120.000

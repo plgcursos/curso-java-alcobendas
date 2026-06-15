@@ -1,0 +1,31 @@
+#!/bin/bash
+
+op=10
+while [ $op -ne 0 ]
+do
+  clear
+  echo "1-Crear un fichero"
+  echo "2-Crear una carpeta"
+  echo "3-Listar contenido carpeta actual"
+  echo "0-salir"
+  read -p "Introduce una opcion: " op
+
+  case $op in
+  1)
+    read -p "Nombre fichero: " fich
+    touch $fich
+    ;;
+  2)
+    read -p "Nombre carpeta: " carpeta
+    mkdir $carpeta
+    ;;
+  3)
+    ls -la
+    ;;
+  esac
+  if [ $op -ne 0 ]
+  then  
+    read -p "presione Intro para continuar" nada
+  fi
+done
+echo "Hasta la vista Baby!!!"

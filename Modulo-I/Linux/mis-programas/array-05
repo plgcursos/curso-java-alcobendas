@@ -1,0 +1,12 @@
+#!/bin/bash
+ciudades=(Madrid Alcobendas Meco Rosario Cordoba "Ciudad Real")
+
+echo ${ciudades[0]}
+echo ''
+
+for i in {0..5}
+do
+echo "Posicion:" $i "-" ${ciudades[i]}
+echo "dentro del bucle"
+done
+echo "fuera del bucle"
