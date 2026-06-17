@@ -24,6 +24,5 @@ public class Ej14 {
 		System.out.println(capitalize("  Universal serial      Bus   "));
 		System.out.println(capitalize("  Congreso internacional de programación de String   "));
 		System.out.println(capitalize("  CONGRESO INTERNACIONAL DE PROGRAMACIÓN DE STRING   "));
-		
 	}
 }
