@@ -9,15 +9,14 @@ public class Ej15 {
 		double resu = 0;
 		String operadores = "+-*/";
 		int posOp = -1;
-		int i;
-		for (i = 0; i < 4 && posOp == -1; i++) {
+		for (int i = 0; i < 4 && posOp == -1; i++) {
 			posOp = exp.indexOf(operadores.charAt(i));
 		}
 		
 		double n1 = Double.parseDouble(exp.substring(0, posOp));
 		double n2 = Double.parseDouble(exp.substring(posOp + 1));
 		
-//		resu = switch (operadores.charAt(i-1)) {
+//		return switch (exp.charAt(posOp)) {
 		resu = switch (exp.charAt(posOp)) {
 		case '+' -> n1 + n2;
 		case '-' -> n1 - n2;
