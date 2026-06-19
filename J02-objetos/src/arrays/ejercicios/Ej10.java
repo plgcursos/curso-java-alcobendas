@@ -9,11 +9,12 @@ public class Ej10 {
 			System.out.println("Ejecutar con usuario y password");
 			return;
 		}
-		if (!existeUsuario(args[0])) {
+		int pos = existeUsuario(args[0]); 
+		if (pos == -1) {
 			System.out.println("El ususario " + args[0] + " no existe");
 			return;
 		}
-		if (!passwordOK(args[0], args[1])) {
+		if (!passwordOK(pos, args[1])) {
 			System.out.println("El password es incorrecto");
 			return;
 		}
@@ -21,11 +22,11 @@ public class Ej10 {
 		System.out.println("Bienvenido al Sistema, que no hace nada!");
 	}
 	
-	public static boolean existeUsuario(String usr) {
-		return false;
+	public static int existeUsuario(String usr) {
+		return -1;
 	}
 	
-	public static boolean passwordOK(String usr, String pwd) {
+	public static boolean passwordOK(int pos, String pwd) {
 		return false;
 	}
 }
