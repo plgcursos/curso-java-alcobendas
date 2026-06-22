@@ -9,7 +9,7 @@ public class Ej10 {
 			System.out.println("Ejecutar con usuario y password");
 			return;
 		}
-		int pos = existeUsuario(args[0]); 
+		int pos = existeUsuario(args[0]);
 		if (pos == -1) {
 			System.out.println("El ususario " + args[0] + " no existe");
 			return;
