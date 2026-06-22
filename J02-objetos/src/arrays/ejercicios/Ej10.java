@@ -5,7 +5,6 @@ public class Ej10 {
 	static String[] passwords = {"xadmin", "xpepe"};
 	
 	public static void main(String[] args) {
-		int algo;
 		if (args.length != 2) {
 			System.out.println("Ejecutar con usuario y password");
 			return;
