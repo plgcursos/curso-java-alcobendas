@@ -25,4 +25,13 @@ public class ArrayUtil {
 		}
 		System.out.println(v[v.length - 1] + "]");
 	}
+	
+	public static void muestra(double[][] m) {
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m[i].length; j++) {
+				System.out.printf("%12.3f", m[i][j]);
+			}
+			System.out.println();
+		}
+	}
 }
