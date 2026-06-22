@@ -5,6 +5,7 @@ public class Ej10 {
 	static String[] passwords = {"xadmin", "xpepe"};
 	
 	public static void main(String[] args) {
+		int algo;
 		if (args.length != 2) {
 			System.out.println("Ejecutar con usuario y password");
 			return;
@@ -23,10 +24,15 @@ public class Ej10 {
 	}
 	
 	public static int existeUsuario(String usr) {
-		return -1;
+		int pos = -1;
+		for (int i = 0; i < users.length && pos == -1; i++) {
+			if (users[i].equals(usr))
+				pos = i;
+		}
+		return pos;
 	}
 	
 	public static boolean passwordOK(int pos, String pwd) {
-		return false;
+		return passwords[pos].equals(pwd);
 	}
 }
