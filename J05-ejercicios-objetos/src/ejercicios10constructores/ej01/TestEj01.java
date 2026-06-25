@@ -1,4 +1,4 @@
-package ejercicios10constructores;
+package ejercicios10constructores.ej01;
 
 public class TestEj01 {
 	public static void main(String[] args) {

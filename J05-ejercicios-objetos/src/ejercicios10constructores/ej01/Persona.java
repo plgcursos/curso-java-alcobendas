@@ -1,11 +1,19 @@
-package ejercicios10constructores;
+package ejercicios10constructores.ej01;
 
 public class Persona {
 	public String nombre;
 	public int edad;
 	
-	public Persona(String nombre, int edad) {
+	public Persona() {
+		this("Sin nombre");
+	}
+	
+	public Persona(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public Persona(String nombre, int edad) {
+		this(nombre);
 		this.edad = edad;
 	}
 	
