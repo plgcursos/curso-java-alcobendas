@@ -24,4 +24,19 @@ public class Circulo extends Figura {
 	public double perimetro() {
 		return Math.PI * diametro();
 	}
+	
+	@Override
+	public String toString() {
+		return "Circulo(" + x + ", " + y + ", " + radio + ")";
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (!super.equals(o))
+			return false;
+		if (this == o)
+			return true;
+		Circulo otro = (Circulo)o;
+		return this.radio == otro.radio;
+	}
 }
