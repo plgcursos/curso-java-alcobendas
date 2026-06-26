@@ -34,23 +34,12 @@ public class Rectangulo extends Figura {
 	}
 
 	@Override
-	public int hashCode() {
-		return Objects.hash(lado1, lado2);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
+	public boolean equals(Object o) {
+		if (!super.equals(o))
+			return false;
+		if (o == this)
 			return true;
-		if (obj == null)
-			return false;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Rectangulo other = (Rectangulo) obj;
-		return Double.doubleToLongBits(lado1) == Double.doubleToLongBits(other.lado1)
-				&& Double.doubleToLongBits(lado2) == Double.doubleToLongBits(other.lado2);
+		Rectangulo otro = (Rectangulo) o;
+		return this.lado1 == otro.lado1 && this.lado2 == otro.lado2;
 	}
-	
 }
