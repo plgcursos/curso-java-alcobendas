@@ -1,6 +1,8 @@
 package model;
 
-public class Circulo extends Figura {
+import model.rrhh.Printable;
+
+public class Circulo extends Figura implements Printable {
 
 	private double radio;
 	
@@ -46,5 +48,10 @@ public class Circulo extends Figura {
 			return true;
 		Circulo otro = (Circulo)o;
 		return this.radio == otro.radio;
+	}
+
+	@Override
+	public void print() {
+		System.out.println("soy el circulito!!!");
 	}
 }

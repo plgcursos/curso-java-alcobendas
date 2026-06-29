@@ -1,6 +1,6 @@
 package model;
 
-public class Figura {
+public abstract class Figura {
 
 	private double x;
 	private double y;
@@ -19,13 +19,9 @@ public class Figura {
 		return Math.sqrt(x * x + y * y);
 	}
 	
-	public double area() {
-		return 0;
-	}
+	public abstract double area();
 
-	public double perimetro() {
-		return 0;
-	}
+	public abstract double perimetro();
 	
 	public double getX() {
 		return x;
