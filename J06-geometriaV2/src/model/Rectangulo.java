@@ -1,10 +1,8 @@
 package model;
 
-
-
 public class Rectangulo extends Figura {
-	public double lado1;
-	public double lado2;
+	private double lado1;
+	private double lado2;
 	
 	public Rectangulo() {}
 	
@@ -28,9 +26,25 @@ public class Rectangulo extends Figura {
 		return 2 * (lado1 + lado2);
 	}
 
+	public double getLado1() {
+		return lado1;
+	}
+
+	public void setLado1(double lado1) {
+		this.lado1 = lado1;
+	}
+
+	public double getLado2() {
+		return lado2;
+	}
+
+	public void setLado2(double lado2) {
+		this.lado2 = lado2;
+	}
+
 	@Override
 	public String toString() {
-		return "Rectangulo [" + x + ", " + y + ", " + lado1 + ", " + lado2 + "]";
+		return "Rectangulo [" + getX() + ", " + getY() + ", " + lado1 + ", " + lado2 + "]";
 	}
 
 	@Override
