@@ -2,8 +2,8 @@ package lista;
 
 public class TestLista {
 	public static void main(String[] args) {
-//		ListaArray la = new ListaArray();
-		ListaEnlazada la = new ListaEnlazada();
+		ListaArray la = new ListaArray();
+//		ListaEnlazada la = new ListaEnlazada();
 		la.agregar("uno");
 		la.agregar("dos");
 		la.agregar("3");
