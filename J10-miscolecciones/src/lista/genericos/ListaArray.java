@@ -60,4 +60,10 @@ public class ListaArray<T> implements Lista<T> {
 		return cant;
 	}
 
+	@Override
+	public T eliminar(T elem) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

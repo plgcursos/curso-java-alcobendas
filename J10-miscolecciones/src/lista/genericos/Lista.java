@@ -1,14 +1,11 @@
 package lista.genericos;
 
-public interface Lista <T> {
+import colecciones.genericos.Coleccion;
 
-	void agregar(T dato);
-	
+public interface Lista <T> extends Coleccion<T> {
+
 	T eliminar(int pos);
 	
 	T buscar(int pos);
-	
-	boolean estaVacia();
-	
-	int largo();
+
 }

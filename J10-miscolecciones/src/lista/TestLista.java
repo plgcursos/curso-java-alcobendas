@@ -24,7 +24,7 @@ public class TestLista {
 	
 	public static void recorre(Lista lista) {
 		for (int i = 0; i < lista.largo(); i++) {
-			System.out.println(lista.buscar(i));
+			System.out.println(lista.buscar(i).toUpperCase());
 		}
 	}
 }

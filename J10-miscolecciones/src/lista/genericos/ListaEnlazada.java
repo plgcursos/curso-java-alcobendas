@@ -87,5 +87,11 @@ public class ListaEnlazada<T> implements Lista<T> {
 			this.dato = dato;
 		}
 	}
+
+	@Override
+	public T eliminar(T elem) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }
