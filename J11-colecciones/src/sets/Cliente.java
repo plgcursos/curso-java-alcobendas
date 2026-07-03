@@ -1,8 +1,9 @@
 package sets;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Cliente {
+public class Cliente implements Comparable<Cliente> {
 	private int idCliente;
 	private String nombre;
 	private String telefono;
@@ -41,8 +42,8 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [" + idCliente + ", " + (nombre != null ? nombre + ", " : "")
-				+ (telefono != null ? telefono : "") + "]";
+		return "Cliente [" + idCliente + ", " + (nombre != null ? nombre : "")
+				+ (telefono != null ? ", " + telefono : "") + "]";
 	}
 
 	@Override
@@ -61,6 +62,18 @@ public class Cliente {
 		Cliente other = (Cliente) obj;
 		return idCliente == other.idCliente;
 	}
+
+	@Override
+	public int compareTo(Cliente o) {
+		return this.idCliente - o.idCliente;
+	}
 	
-	
+	public static Comparator<Cliente> getNombreComparator(){
+		return new Comparator<Cliente>() {
+			@Override
+			public int compare(Cliente c1, Cliente c2) {
+				return c1.getNombre().compareToIgnoreCase(c2.getNombre());
+			}
+		};
+	}
 }

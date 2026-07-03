@@ -1,11 +1,14 @@
 package sets;
 
+import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Set02Tree {
 	public static void main(String[] args) {
-		Set<String> nombres = new TreeSet<String>();
+		
+		Set<String> nombres = new HashSet<>();
 		nombres.add("Santi");
 		nombres.add("Geor");
 		nombres.add("Manuel");
@@ -48,6 +51,34 @@ public class Set02Tree {
 		
 		for(Cliente cli : clientes) {
 			System.out.println(cli);
+		}
+		System.out.println("------------");
+
+		Set<Cliente> clientes2 = new TreeSet<Cliente>(new ClienteIdDescComparator());
+		clientes2.addAll(clientes);
+		
+		for (Cliente cliente : clientes2) {
+			System.out.println(cliente);
+		}
+		System.out.println("------------");
+		
+		// Con clase anónima
+		Set<Cliente> clientes3 = new TreeSet<Cliente>(new Comparator<Cliente>() {
+			@Override
+			public int compare(Cliente c1, Cliente c2) {
+				return c2.getIdCliente() - c1.getIdCliente();
+			}
+		});
+		clientes3.addAll(clientes);
+		for (Cliente cliente : clientes3) {
+			System.out.println(cliente);
+		}
+		System.out.println("------------");
+		
+		Set<Cliente> clientes4 = new TreeSet<>(Cliente.getNombreComparator());
+		clientes4.addAll(clientes);
+		for (Cliente cliente : clientes4) {
+			System.out.println(cliente);
 		}
 	}
 }
