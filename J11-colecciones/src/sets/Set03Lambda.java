@@ -18,6 +18,8 @@ public class Set03Lambda {
 //			System.out.println(palabra);
 //		}
 		
-		palabras.forEach(p -> System.out.println(p));
+		palabras.forEach(x -> System.out.println(x));
+		
+		palabras.forEach(System.out::println);
 	}
 }
