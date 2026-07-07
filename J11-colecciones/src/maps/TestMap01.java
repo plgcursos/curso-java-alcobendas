@@ -3,6 +3,7 @@ package maps;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.TreeMap;
 
 public class TestMap01 {
@@ -35,9 +36,46 @@ public class TestMap01 {
 
 		// Pedir las claves
 		// keySet() : Set<Integer>
-		for (Integer key : mapa.keySet()) {
-			System.out.println(key);
-		}
+//		for (Integer key : mapa.keySet()) {
+//			System.out.println(key);
+//		}
+		mapa.keySet().forEach(System.out::println);
+		System.out.println();
+		
+		// Pedir los valores
+		// values() : Collection<String>
+//		for(String value : mapa.values()) {
+//			System.out.println(value.toUpperCase());
+//		}
+		mapa.values()
+			.stream()
+			.map(v -> v.toUpperCase())
+			.forEach(System.out::println);
+		System.out.println();
+		
+		mapa.values()
+		.stream()
+		.map(String::toUpperCase)
+		.forEach(System.out::println);
+		System.out.println();
+		
+		// Recorrer el mapa
+		// entrySet() : Set<Entry<Integer, String>>
+//		for (Entry<Integer, String> entry : mapa.entrySet()) {
+////			System.out.println(entry);// entry.getKey();  entry.getValue();
+//			System.out.println(entry.getKey() + ": " + entry.getValue());
+//		}
+		
+		mapa.entrySet()
+			.stream()
+			.map(e -> e.getKey() + ": " + e.getValue())
+			.forEach(System.out::println);
+		System.out.println();
+		
+		mapa.entrySet()
+			.stream()
+			.forEach(e -> System.out.println(e.getKey() + ": " + e.getValue()));
+		
 		
 		System.out.println("------------------");
 		
