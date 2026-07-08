@@ -3,6 +3,7 @@ package util;
 import modelo.Alumno;
 
 public class CargaAlumnos {
+	
 	public static Alumno[] getArrayAlumnos() {
 		Alumno[] alumnos = new Alumno[200];
 		alumnos[0] = new Alumno("María Isabel", "Ruiz", "Marques", "13967823S", 6.0);
