@@ -1,5 +1,6 @@
 package introduccion.util;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Consola {
@@ -16,9 +17,21 @@ public class Consola {
 	}
 	
 	public static int leeInt(String mensaje) {
-		System.out.print(mensaje);
-		int n = tec.nextInt();
-		tec.nextLine();
+		boolean ok;
+		int n;
+		do {
+			ok = true;
+			System.out.print(mensaje);
+			try {
+				n = tec.nextInt();
+				tec.nextLine();
+			} catch(InputMismatchException e) {
+				System.out.println("Ingrese un valor entero!!!");
+				ok = false;
+				n = 0;
+				tec.nextLine();
+			}
+		} while(!ok);
 		return n;
 	}
 	
