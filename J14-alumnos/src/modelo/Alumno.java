@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.Locale;
 import java.util.Objects;
 
-public class Alumno implements Comparable<Alumno> {
+public class Alumno implements Comparable<Alumno>, Cloneable {
 	private String nombre;
 	private String apellido1;
 	private String apellido2;
@@ -82,7 +82,8 @@ public class Alumno implements Comparable<Alumno> {
 
 	@Override
 	public String toString() {
-		return "Alumno [" + nombre + ", " + apellido1 + ", " + apellido2 + ", " + dni + ", " + nota + "]";
+//		return "Alumno [" + nombre + ", " + apellido1 + ", " + apellido2 + ", " + dni + ", " + nota + "]";
+		return String.format("%-13s%-13s%-20s%-10s%5.2f", apellido1, apellido2, nombre, dni, nota);
 	}
 
 	@Override
@@ -109,5 +110,10 @@ public class Alumno implements Comparable<Alumno> {
 				.thenComparing(Alumno::getApellido2, col)
 				.thenComparing(Alumno::getNombre, col)
 				.thenComparing(Alumno::getDni, col);
+	}
+
+	@Override
+	public Alumno clone() {
+		return new Alumno(this.nombre, this.apellido1, this.apellido2, this.dni, this.nota);
 	}
 }
