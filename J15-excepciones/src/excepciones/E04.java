@@ -7,7 +7,7 @@ import java.io.UncheckedIOException;
 public class E04 {
 	public static void main(String[] args) {
 
-		m("datos.txt");
+		m("ssdatos.txt");
 		
 		System.out.println("Main finalizado");
 
@@ -17,13 +17,17 @@ public class E04 {
 		try {
 			FileReader fr = new FileReader(fichero);
 			System.out.println("Se ejecutó correctmente");
+			return;
 		} catch (FileNotFoundException e) {
 			// se puede dejar un log
 			System.out.println("Esto ha fallado");
-			throw new UncheckedIOException(e);
+			
+//			throw new UncheckedIOException(e);
+			throw new NoExisteFicheroException("Esto ha petaooooo", e);
+			
 		} finally {
-			System.out.println("Esto se ejecuta siempre");
+			System.err.println("Esto se ejecuta siempre");
 		}
-		System.out.println("El método finalizó");
+//		System.out.println("El método finalizó");
 	}
 }
