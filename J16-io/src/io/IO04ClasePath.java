@@ -9,7 +9,7 @@ public class IO04ClasePath {
 		
 		Path path2 = Path.of("/usr/juan/tmp/pepe.txt");
 		
-		System.out.println(path2.getFileName()); // datos.txt
+		System.out.println(path2.getFileName()); // pepe.txt
 		System.out.println(path2.getParent());  // /usr/juan/tmp
 		System.out.println(path2.getRoot());  // /
 		
