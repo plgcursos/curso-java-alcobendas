@@ -3,6 +3,7 @@ package io;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -53,5 +54,12 @@ public class IO05ClaseFiles {
 				Quijana; pero esto importa poco a nuestro cuento; basta que en la
 				narraciÃ³n dÃ©l no se salga un punto de la verdad.
 				""";
+		Files.writeString(nuevo, quijote);
+		
+		//write() - Graba un Iterable
+		List<String> datos = List.of("Linea 1", "otra", "otra mas");
+		Files.write(Path.of("otro.txt"), datos);
+		
+		Files.writeString(nuevo, "En otro lugar de la Mancha", StandardOpenOption.CREATE);
 	}
 }
