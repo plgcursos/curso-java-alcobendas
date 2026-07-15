@@ -10,6 +10,11 @@ public class Fabricante {
 		this.fabricante = fabricante;
 	}
 
+	public Fabricante(Integer idFabricante, String fabricante) {
+		this.idFabricante = idFabricante;
+		this.fabricante = fabricante;
+	}
+
 	public Integer getIdFabricante() {
 		return idFabricante;
 	}

@@ -7,4 +7,9 @@ import es.cursoalcobendas.jdbcmaven.modelo.Fabricante;
 public interface FabricanteDao {
 
 	List<Fabricante> findAll();
+	
+	List<Fabricante> findByNombre(String nombre);
+	
+	Fabricante insert(Fabricante f);
+
 }
