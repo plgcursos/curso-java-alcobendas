@@ -4,6 +4,8 @@ import javax.sql.DataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
+import es.cursoalcobendas.jdbcmaven.config.Prop;
+
 //Implementa el patrón Singleton
 public class Ds {
 
@@ -14,11 +16,12 @@ public class Ds {
 	public static DataSource getInstance() {
 		if (ds == null) {
 			BasicDataSource bds = new BasicDataSource();
-			bds.setUrl("url");
-			bds.setUsername("usr");
-			bds.setPassword("pwd");
+			bds.setUrl(Prop.get().getProperty("url"));
+			bds.setUsername(Prop.get().getProperty("usr"));
+			bds.setPassword(Prop.get().getProperty("pwd"));
 			ds = bds;
 		}
 		return ds;
 	}
+
 }
