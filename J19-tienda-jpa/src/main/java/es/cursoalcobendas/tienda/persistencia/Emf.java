@@ -1,6 +1,7 @@
 package es.cursoalcobendas.tienda.persistencia;
 
 import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
 public class Emf {
 
@@ -9,7 +10,8 @@ public class Emf {
 	private Emf() {}
 	
 	public static EntityManagerFactory get() {
-		
+		if (emf == null)
+			emf = Persistence.createEntityManagerFactory("tienda");
 		return emf;
 	}
 }
