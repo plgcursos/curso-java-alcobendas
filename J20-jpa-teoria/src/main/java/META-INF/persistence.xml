@@ -7,6 +7,14 @@
 		<class>es.cursoalcobendas.jpa.ej02_enum.Persona02</class>
 		<class>es.cursoalcobendas.jpa.ej03_pkcompuesta.Persona03</class> 
 		<class>es.cursoalcobendas.jpa.ej03_pkcompuesta.Persona03B</class> 
+		<class>es.cursoalcobendas.jpa.ej04_insertable.Persona04</class>
+		<class>es.cursoalcobendas.jpa.ej05_tipoacceso.Persona05</class>
+		<class>es.cursoalcobendas.jpa.ej06_herenciasingletable.Figura</class>
+		<class>es.cursoalcobendas.jpa.ej06_herenciasingletable.Circulo</class>
+		<class>es.cursoalcobendas.jpa.ej06_herenciasingletable.Rectangulo</class>
+		<class>es.cursoalcobendas.jpa.ej07_herenciajoined.Figura2</class>
+		<class>es.cursoalcobendas.jpa.ej07_herenciajoined.Circulo2</class>
+		<class>es.cursoalcobendas.jpa.ej07_herenciajoined.Rectangulo2</class>
 	
 		<properties>
 <!-- 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> -->
@@ -18,7 +26,7 @@
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.highlight_sql" value="true" />
-			<property name="hibernate.use_sql_comments" value="true" />
+<!-- 			<property name="hibernate.use_sql_comments" value="true" /> -->
 
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3366/curso_jpa"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
