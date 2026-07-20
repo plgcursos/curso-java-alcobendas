@@ -8,11 +8,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "domicilio")
-public class Domicilio implements Serializable {
+public class Domicilio2 implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -27,9 +28,12 @@ public class Domicilio implements Serializable {
 	private String puerta;
 	private String ciudad;
 	
-	public Domicilio() {}
+	@OneToOne(mappedBy = "domicilio")
+	private Contacto2 contacto;
+	
+	public Domicilio2() {}
 
-	public Domicilio(String tipoVia, String via, int numero, int piso, String puerta, String ciudad) {
+	public Domicilio2(String tipoVia, String via, int numero, int piso, String puerta, String ciudad) {
 		this.tipoVia = tipoVia;
 		this.via = via;
 		this.numero = numero;
@@ -94,6 +98,14 @@ public class Domicilio implements Serializable {
 		this.ciudad = ciudad;
 	}
 
+	public Contacto2 getContacto() {
+		return contacto;
+	}
+
+	public void setContacto(Contacto2 contacto) {
+		this.contacto = contacto;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(idDomicilio);
@@ -107,14 +119,15 @@ public class Domicilio implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Domicilio other = (Domicilio) obj;
+		Domicilio2 other = (Domicilio2) obj;
 		return idDomicilio == other.idDomicilio;
 	}
 
 	@Override
 	public String toString() {
-		return "Domicilio [" + idDomicilio + ", " + tipoVia + ", " + via + ", " + numero + ", " + piso + ", " + puerta
+		return "Domicilio2 [" + idDomicilio + ", " + tipoVia + ", " + via + ", " + numero + ", " + piso + ", " + puerta
 				+ ", " + ciudad + "]";
 	}
+
 
 }

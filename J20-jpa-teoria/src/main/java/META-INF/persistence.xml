@@ -21,6 +21,10 @@
 		<class>es.cursoalcobendas.jpa.ej07_herenciajoined.Figura2</class>
 		<class>es.cursoalcobendas.jpa.ej07_herenciajoined.Circulo2</class>
 		<class>es.cursoalcobendas.jpa.ej07_herenciajoined.Rectangulo2</class>
+		<class>es.cursoalcobendas.jpa.ej08_onetoone.Contacto</class>
+		<class>es.cursoalcobendas.jpa.ej08_onetoone.Domicilio</class>
+		<class>es.cursoalcobendas.jpa.ej08_onetoone.Contacto2</class>
+		<class>es.cursoalcobendas.jpa.ej08_onetoone.Domicilio2</class>
 	
 		<properties>
 <!-- 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> -->
