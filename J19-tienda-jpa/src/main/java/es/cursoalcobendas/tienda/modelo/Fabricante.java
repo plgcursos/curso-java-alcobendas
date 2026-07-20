@@ -1,12 +1,15 @@
 package es.cursoalcobendas.tienda.modelo;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,6 +21,9 @@ public class Fabricante {
 	@Column(name = "id_fabricante")
 	private Integer idFabricante;
 	private String fabricante;
+	
+	@OneToMany(mappedBy = "fabricante")
+	private Set<Producto> productos = new HashSet<>();
 	
 	public Fabricante() {
 	}
@@ -45,6 +51,14 @@ public class Fabricante {
 
 	public void setFabricante(String fabricante) {
 		this.fabricante = fabricante;
+	}
+
+	public Set<Producto> getProductos() {
+		return productos;
+	}
+
+	public void setProductos(Set<Producto> productos) {
+		this.productos = productos;
 	}
 
 	@Override

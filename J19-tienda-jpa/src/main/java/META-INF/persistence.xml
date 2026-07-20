@@ -10,6 +10,7 @@
 	<persistence-unit name="tienda" transaction-type="RESOURCE_LOCAL">
 	
 		<class>es.cursoalcobendas.tienda.modelo.Fabricante</class>
+		<class>es.cursoalcobendas.tienda.modelo.Producto</class>
 	
 		<properties>
 <!-- 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> -->
