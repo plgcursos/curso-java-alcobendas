@@ -27,6 +27,10 @@
 		<class>es.cursoalcobendas.jpa.ej08_onetoone.Domicilio2</class>
 		<class>es.cursoalcobendas.jpa.ej09_elementcollection.Contacto3</class>
 		<class>es.cursoalcobendas.jpa.ej09_elementcollection.Domicilio3</class>
+		<class>es.cursoalcobendas.jpa.ej11_manytoone.Partido</class>
+		<class>es.cursoalcobendas.jpa.ej11_manytoone.Campo</class>
+		<class>es.cursoalcobendas.jpa.ej11_manytoone.Partido2</class>
+		<class>es.cursoalcobendas.jpa.ej11_manytoone.Campo2</class>
 	
 		<properties>
 <!-- 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> -->
