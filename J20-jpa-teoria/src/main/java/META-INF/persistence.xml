@@ -31,6 +31,8 @@
 		<class>es.cursoalcobendas.jpa.ej11_manytoone.Campo</class>
 		<class>es.cursoalcobendas.jpa.ej11_manytoone.Partido2</class>
 		<class>es.cursoalcobendas.jpa.ej11_manytoone.Campo2</class>
+		<class>es.cursoalcobendas.jpa.ej12_manytomany.Equipo</class>
+		<class>es.cursoalcobendas.jpa.ej12_manytomany.Jugador</class>
 	
 		<properties>
 <!-- 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> -->
