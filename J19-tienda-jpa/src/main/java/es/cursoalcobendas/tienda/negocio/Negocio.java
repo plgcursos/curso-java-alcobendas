@@ -1,4 +1,4 @@
-package es.cursoalcobendas.tienda;
+package es.cursoalcobendas.tienda.negocio;
 
 import java.util.Set;
 
