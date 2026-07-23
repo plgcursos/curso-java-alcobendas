@@ -10,6 +10,12 @@ public interface FabricanteDao {
 	
 	List<Fabricante> findByNombre(String nombre);
 	
-	Fabricante insert(Fabricante f);
+	Fabricante save(Fabricante f);
+	
+	Fabricante findById(Integer id);
+	
+	void deleteById(Integer id);
+	
+	void delete(Fabricante f);
 
 }

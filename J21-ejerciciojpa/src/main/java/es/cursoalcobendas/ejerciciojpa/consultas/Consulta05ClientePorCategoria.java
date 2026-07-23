@@ -7,7 +7,9 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 
 public class Consulta05ClientePorCategoria {
-	public static void main(String[] args) {
+	
+	public static List<Object[]> clientesPorCategoria() {
+		
 		EntityManager em = Emf.get().createEntityManager();
 		
 		// Cantidad de clientes por categoría
@@ -15,10 +17,12 @@ public class Consulta05ClientePorCategoria {
 		
 		TypedQuery<Object[]> q = em.createQuery(jpql, Object[].class);
 		
-		q.getResultList().forEach(o -> System.out.println(o[0] + ": " + o[1]));
-		System.out.println("-------------");
-		
-		List<Object[]> resu = q.getResultList();
+		return q.getResultList();
+	}
+	
+	//metodo de negocio
+	public static void main(String[] args) {
+		List<Object[]> resu = clientesPorCategoria();
 		
 		for (Object[] o : resu) {
 			System.out.println(o[0] + ": " + o[1]);

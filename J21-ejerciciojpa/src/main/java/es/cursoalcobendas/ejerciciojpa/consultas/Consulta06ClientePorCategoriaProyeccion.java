@@ -8,15 +8,24 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 
 public class Consulta06ClientePorCategoriaProyeccion {
-	public static void main(String[] args) {
+
+	public static List<ClientePorCategoria> clientesPorCategoria() {
 		EntityManager em = Emf.get().createEntityManager();
 		
 		// Cantidad de clientes por categoría
-		String jpql = "select new es.cursoalcobendas.ejerciciojpa.modelo.ClientePorCategoria(c.categoria, count(c)) from Cliente c group by c.categoria";
+		String jpql = """
+				select new es.cursoalcobendas.ejerciciojpa.modelo.ClientePorCategoria(c.categoria, count(c))
+				from Cliente c
+				group by c.categoria				
+				"""; 
 		
 		TypedQuery<ClientePorCategoria> q = em.createQuery(jpql, ClientePorCategoria.class);
 		
-		List<ClientePorCategoria> resu = q.getResultList();
+		return q.getResultList();
+	}
+	
+	public static void main(String[] args) {
+		List<ClientePorCategoria> resu = clientesPorCategoria();
 		
 		resu.forEach(System.out::println);
 	}
