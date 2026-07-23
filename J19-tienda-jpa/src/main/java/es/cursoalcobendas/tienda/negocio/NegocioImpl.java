@@ -41,15 +41,24 @@ public class NegocioImpl implements Negocio {
 		Set<Fabricante> resu = new TreeSet<Fabricante>(
 				(f1, f2) -> f1.getFabricante().compareToIgnoreCase(f2.getFabricante())
 			);
-		return null;
+		resu.addAll(fDao.findAll());
+		return resu;
 	}
 	
-	@Override
-	public Set<Fabricante> buscarFabricantes(String desc) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	// si no es el orden natural
+//	public Set<Fabricante> buscarFabricantes(String desc) {
+//		Set<Fabricante> resu = new TreeSet<Fabricante>(Comparator.comparing(Fabricante::getIdFabricante));
+//		resu.addAll(fDao.findByNombre(desc));
+//		return resu;
+//	}
 
+	@Override
+	// si ya tiene orden natural por id
+	public Set<Fabricante> buscarFabricantes(String desc) {
+		return new TreeSet<Fabricante>(fDao.findByNombre(desc));
+	}
+	
 	@Override
 	public Fabricante crearFabricante(Fabricante nuevo) {
 		// TODO Auto-generated method stub

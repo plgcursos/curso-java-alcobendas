@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "fabricantes")
-public class Fabricante {
+public class Fabricante implements Comparable<Fabricante> {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -78,5 +78,10 @@ public class Fabricante {
 	@Override
 	public String toString() {
 		return "Fabricante [" + idFabricante + ", " + fabricante + "]";
+	}
+
+	@Override
+	public int compareTo(Fabricante o) {
+		return this.idFabricante - o.idFabricante;
 	}
 }
