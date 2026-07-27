@@ -1,24 +1,21 @@
 package es.cursoalcobendas.tienda.tests;
 
 import es.cursoalcobendas.tienda.modelo.Fabricante;
+import es.cursoalcobendas.tienda.modelo.Producto;
 import es.cursoalcobendas.tienda.persistencia.Emf;
 import jakarta.persistence.EntityManager;
 
-public class Test01 {
+public class Test02Mapeo {
 	public static void main(String[] args) {
-		
 		EntityManager em = Emf.get().createEntityManager();
 		
-		Fabricante f = em.find(Fabricante.class, 8);
+		Fabricante f = em.find(Fabricante.class, 1);
 		
-		System.out.println(f);
+		Producto nuevo = new Producto("Monitor piripipi", 258.6, f);
 		
-		
-		Fabricante nuevo = new Fabricante("Sony");
+		em.persist(nuevo);
 		
 		em.getTransaction().begin();
-		em.persist(nuevo);
 		em.getTransaction().commit();
-		
 	}
 }
