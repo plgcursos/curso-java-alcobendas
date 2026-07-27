@@ -16,38 +16,66 @@ public class ProductoDaoImpl implements ProductoDao {
 
 	@Override
 	public List<Producto> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager em = emf.createEntityManager();
+		try(em){
+			String jpql = """
+					select p
+					from Producto p
+					left join fetch p.fabricante
+					""";
+			TypedQuery<Producto> q = em.createQuery(jpql, Producto.class);
+			return q.getResultList();
+		}
 	}
 
 	@Override
 	public List<Producto> findByNombre(String nombre) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager em = emf.createEntityManager();
+		try(em){
+			String jpql = """
+					select p
+					from Producto p
+					left join fetch p.fabricante
+					where p.producto like :prod
+					""";
+			TypedQuery<Producto> q = em.createQuery(jpql, Producto.class);
+			return q.setParameter("prod", "%" + nombre + "%").getResultList();
+		}
 	}
 
 	@Override
 	public Producto save(Producto p) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager em = emf.createEntityManager();
+		Producto saved = null;
+		try(em) {
+			em.getTransaction().begin();;
+			saved = em.merge(p);
+			em.getTransaction().commit();
+			return saved;
+		}
 	}
 
 	@Override
 	public Producto findById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager em = emf.createEntityManager();
+		try(em) {
+			return em.find(Producto.class, id);
+		}
 	}
 
 	@Override
 	public void deleteById(Integer id) {
-		// TODO Auto-generated method stub
-		
+		EntityManager em = emf.createEntityManager();
+		try(em) {
+			em.getTransaction().begin();
+			em.remove(em.find(Producto.class, id));
+			em.getTransaction().commit();
+		}
 	}
 
 	@Override
 	public void delete(Producto p) {
-		// TODO Auto-generated method stub
-		
+		deleteById(p.getIdProducto());
 	}
 
 //	@Override

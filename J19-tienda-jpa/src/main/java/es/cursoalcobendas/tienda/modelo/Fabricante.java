@@ -1,6 +1,9 @@
 package es.cursoalcobendas.tienda.modelo;
 
+import java.text.Collator;
+import java.util.Comparator;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
 
@@ -83,5 +86,10 @@ public class Fabricante implements Comparable<Fabricante> {
 	@Override
 	public int compareTo(Fabricante o) {
 		return this.idFabricante - o.idFabricante;
+	}
+	
+	public static Comparator<Fabricante> getComparatorNombre(){
+		Collator col = Collator.getInstance(new Locale("ES"));
+		return (f1, f2) -> col.compare(f1.getFabricante(), f2.getFabricante());
 	}
 }
