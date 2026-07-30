@@ -1,9 +1,6 @@
 package es.cursoalcobendas.tienda.negocio;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -84,4 +81,98 @@ public class TiendaImpl implements Tienda {
 				.limit(cant)
 				.toList();
 	}
+
+	@Override
+	public List<Producto> buscarProductos() {
+		return pDao.findAll();
+	}
+
+	@Override
+	public Producto buscarProducto(Integer id) {
+		return pDao.findById(id);
+	}
+
+	@Override
+	public Producto crearProducto(Producto nuevo) {
+        validarProducto(nuevo);
+        if (nuevo.getIdProducto() != null)
+            throw new IllegalArgumentException(
+                    "El id del Producto debe ser null");
+        
+        nuevo.setProducto(nuevo.getProducto().trim());
+        nuevo.setFabricante(resolverFabricante(nuevo));
+        return pDao.save(nuevo);
+	}
+
+	@Override
+	public Producto modificarProducto(Integer id, Producto datos) {
+        if (id == null) {
+            throw new IllegalArgumentException(
+                    "El id del producto es obligatorio");
+        }
+
+        validarProducto(datos);
+
+        Producto actual = pDao.findById(id);
+        if (actual == null) {
+            return null;
+        }
+
+        actual.setProducto(datos.getProducto().trim());
+        actual.setPrecio(datos.getPrecio());
+        actual.setFabricante(resolverFabricante(datos));
+        return pDao.save(actual);
+	}
+
+	@Override
+    public boolean eliminarProducto(Integer id) {
+        if (id == null) {
+            return false;
+        }
+
+        Producto producto = pDao.findById(id);
+        if (producto == null) {
+            return false;
+        }
+
+        pDao.delete(producto);
+        return true;
+    }
+
+    private void validarProducto(Producto producto) {
+        if (producto == null) {
+            throw new IllegalArgumentException(
+                    "El producto es obligatorio");
+        }
+        if (producto.getProducto() == null
+                || producto.getProducto().trim().isEmpty()) {
+            throw new IllegalArgumentException(
+                    "El nombre del producto es obligatorio");
+        }
+        if (producto.getPrecio() == null
+                || producto.getPrecio() < 0) {
+            throw new IllegalArgumentException(
+                    "El precio es obligatorio y no puede ser negativo");
+        }
+        if (producto.getFabricante() == null
+                || producto.getFabricante().getIdFabricante() == null) {
+            throw new IllegalArgumentException(
+                    "El fabricante es obligatorio");
+        }
+    }
+    
+    private Fabricante resolverFabricante(Producto producto) {
+        Integer idFabricante =
+                producto.getFabricante().getIdFabricante();
+        Fabricante fabricante =
+                fDao.findById(idFabricante);
+
+        if (fabricante == null) {
+            throw new IllegalArgumentException(
+                    "No existe el fabricante con id " + idFabricante);
+        }
+
+        return fabricante;
+    }
+
 }
