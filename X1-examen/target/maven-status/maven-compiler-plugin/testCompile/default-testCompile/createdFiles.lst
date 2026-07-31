@@ -1,0 +1,8 @@
+org\cursosanblas\examen\AsignaturaMappingTest.class
+org\cursosanblas\examen\persistencia\AsignaturaDaoTest.class
+org\cursosanblas\examen\RelacionesAlumnoAsignaturaTest.class
+org\cursosanblas\examen\ProfesorMappingTest.class
+org\cursosanblas\examen\SchemaValidationTest.class
+org\cursosanblas\examen\JpaTestBase.class
+org\cursosanblas\examen\AlumnoMappingTest.class
+org\cursosanblas\examen\TestResources.class

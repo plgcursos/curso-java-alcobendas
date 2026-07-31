@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="3.0"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+  <persistence-unit name="testPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <!-- Tus entidades -->
+    <class>es.cursosanblas.examen.modelo.Persona</class>
+    <class>es.cursosanblas.examen.modelo.Profesor</class>
+    <class>es.cursosanblas.examen.modelo.Alumno</class>
+    <class>es.cursosanblas.examen.modelo.Asignatura</class>
+
+    <properties>
+      <!-- Se pisan desde el test -->
+      <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/placeholder"/>
+      <property name="jakarta.persistence.jdbc.user" value="placeholder"/>
+      <property name="jakarta.persistence.jdbc.password" value="placeholder"/>
+
+      <property name="hibernate.hbm2ddl.auto" value="none"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.cursosanblas.examen.persistencia.AsignaturaDaoTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.076 s -- in org.cursosanblas.examen.persistencia.AsignaturaDaoTest
