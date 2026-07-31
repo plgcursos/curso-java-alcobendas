@@ -1,0 +1,173 @@
+drop database if exists `91_ex_universidad`;
+CREATE DATABASE `91_ex_universidad` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `91_ex_universidad`;
+-- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
+--
+-- Host: localhost    Database: 91_ex_universidad
+-- ------------------------------------------------------
+-- Server version	8.0.27
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `alumnos`
+--
+
+DROP TABLE IF EXISTS `alumnos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `alumnos` (
+  `id_persona` int NOT NULL,
+  `matricula` varchar(15) NOT NULL,
+  `anyo_inscripcion` int NOT NULL,
+  PRIMARY KEY (`id_persona`),
+  UNIQUE KEY `matricula_UNIQUE` (`matricula`),
+  CONSTRAINT `alumnos_personas` FOREIGN KEY (`id_persona`) REFERENCES `personas` (`id_persona`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `alumnos`
+--
+
+LOCK TABLES `alumnos` WRITE;
+/*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
+INSERT INTO `alumnos` VALUES (64,'38669/27',2020),(65,'57688/35',2016),(66,'13357/82',2018),(67,'09683/49',2024),(68,'52327/56',2023),(69,'36677/17',2016),(70,'59512/71',2024),(71,'27422/25',2024),(72,'40930/05',2021),(73,'66736/88',2018),(74,'85010/68',2017),(75,'92024/98',2023),(76,'10335/28',2024),(77,'10469/67',2015),(78,'20829/70',2023),(79,'50594/64',2018),(80,'57033/80',2018),(81,'20410/26',2019),(82,'06985/74',2019),(83,'34504/53',2024),(84,'75975/39',2015),(85,'94098/05',2016),(86,'39369/12',2023),(87,'46359/43',2018),(88,'56152/09',2022),(89,'13888/15',2020),(90,'26399/80',2021),(91,'14161/11',2023),(92,'74024/58',2023),(93,'16333/04',2020),(94,'72018/72',2015),(95,'90520/11',2018),(96,'29004/38',2015),(97,'01132/88',2023),(98,'56553/84',2024),(99,'77412/28',2019),(100,'67237/72',2022),(101,'40001/67',2018),(102,'82343/56',2023),(103,'64715/37',2024),(104,'46872/49',2015),(105,'60914/32',2024),(106,'38424/42',2022),(107,'32034/74',2017),(108,'04022/52',2024),(109,'43892/85',2022),(110,'03438/57',2019),(111,'06370/91',2022),(112,'49540/08',2022),(113,'90830/67',2018),(114,'49473/67',2017),(115,'88979/71',2017),(116,'91383/49',2020),(117,'73482/86',2020),(118,'64459/13',2022),(119,'69584/50',2020),(120,'96450/61',2022),(121,'60711/50',2023),(122,'42841/01',2017),(123,'14223/39',2016),(124,'54432/86',2020),(125,'05103/39',2019),(126,'79495/68',2023),(127,'84405/74',2021),(128,'31660/42',2016),(129,'63907/96',2021),(130,'57592/60',2022),(131,'34120/63',2018),(132,'12045/62',2016),(133,'05656/29',2022),(134,'29303/26',2024),(135,'65614/59',2020),(136,'23629/82',2018),(137,'37378/96',2022),(138,'41130/31',2024),(139,'51103/03',2023),(140,'34391/13',2021),(141,'75858/57',2015),(142,'37219/61',2018),(143,'06307/50',2015),(144,'12096/79',2024),(145,'44576/55',2022),(146,'75375/27',2023),(147,'79748/80',2024),(148,'22307/23',2024),(149,'21937/32',2017),(150,'28089/65',2022),(151,'50615/69',2024),(152,'76392/47',2017),(153,'17966/53',2015),(154,'45575/85',2023),(155,'77680/06',2019),(156,'32046/26',2018),(157,'07930/69',2024),(158,'93944/16',2021),(159,'80100/99',2023),(160,'12228/53',2018),(161,'28087/13',2023),(162,'41643/82',2022),(163,'15879/69',2020),(164,'22942/74',2018),(165,'20769/15',2020),(166,'01640/61',2022),(167,'81520/22',2020),(168,'68529/04',2017),(169,'51399/39',2020),(170,'02409/07',2016),(171,'35896/67',2022),(172,'07336/01',2015),(173,'64215/47',2023),(174,'34928/71',2023),(175,'92325/77',2019),(176,'89049/64',2016),(177,'33838/34',2016),(178,'88482/31',2019),(179,'08597/51',2021),(180,'30571/33',2015),(181,'44700/45',2021),(182,'71684/73',2021),(183,'23038/36',2021),(184,'60287/03',2024),(185,'02771/89',2024),(186,'10971/57',2017),(187,'81841/60',2023),(188,'28809/59',2024),(189,'79559/20',2024),(190,'91962/73',2021),(191,'75577/79',2020),(192,'59695/45',2016),(193,'40289/53',2022),(194,'80940/34',2021),(195,'53709/41',2015),(196,'86728/20',2016),(197,'55647/61',2019),(198,'41053/84',2024),(199,'97264/34',2021),(200,'74645/56',2024),(201,'93746/84',2022),(202,'13716/18',2023),(203,'02597/88',2020),(204,'36423/69',2021),(205,'16283/64',2016),(206,'36695/83',2019),(207,'04687/35',2017),(208,'24851/19',2024),(209,'42229/95',2019),(210,'89863/47',2021),(211,'96629/94',2022),(212,'24008/38',2021),(213,'68054/08',2017),(214,'04823/18',2016),(215,'20987/78',2021),(216,'59089/75',2015),(217,'41738/79',2018),(218,'84645/81',2017),(219,'11345/38',2015),(220,'92956/78',2018),(221,'11942/63',2021),(222,'73182/54',2021),(223,'37135/68',2016),(224,'78651/25',2023),(225,'63624/05',2016),(226,'65752/82',2018),(227,'73977/83',2019),(228,'93053/93',2023),(229,'91981/64',2019),(230,'69068/04',2018),(231,'77590/48',2024),(232,'93585/81',2023),(233,'89811/84',2015),(234,'88815/08',2019),(235,'83771/50',2022),(236,'51039/39',2023),(237,'76120/64',2017),(238,'71979/33',2023),(239,'33349/74',2017),(240,'27670/80',2018),(241,'66085/81',2020),(242,'06192/44',2023),(243,'50132/50',2019),(244,'87720/85',2019),(245,'04032/16',2016),(246,'80886/98',2024),(247,'56425/75',2018),(248,'40413/71',2021),(249,'40354/62',2022),(250,'63952/45',2017);
+/*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `asignaturas`
+--
+
+DROP TABLE IF EXISTS `asignaturas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `asignaturas` (
+  `id_asignatura` int NOT NULL AUTO_INCREMENT,
+  `asignatura` varchar(45) NOT NULL,
+  `creditos` int NOT NULL,
+  `facultad` varchar(45) DEFAULT NULL,
+  `fk_profesor` int DEFAULT NULL,
+  PRIMARY KEY (`id_asignatura`),
+  UNIQUE KEY `id_asignatura` (`id_asignatura`),
+  KEY `asignaturas_profesores_idx` (`fk_profesor`),
+  CONSTRAINT `asignaturas_profesores` FOREIGN KEY (`fk_profesor`) REFERENCES `profesores` (`id_persona`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `asignaturas`
+--
+
+LOCK TABLES `asignaturas` WRITE;
+/*!40000 ALTER TABLE `asignaturas` DISABLE KEYS */;
+INSERT INTO `asignaturas` VALUES (1,'Programación I',6,'Informatica',5),(2,'Matematica Discreta',6,'Matematica',10),(3,'Programacion II',6,'Informatica',5),(4,'Fisica I',6,'Lic Fisica',20),(5,'Calculo',6,'Matematica',10),(6,'Algebra',6,'Matematica',11),(7,'Base de Datos',6,'Informatica',5),(8,'Estructura de Datos',6,'Informatica',7),(9,'Metodologias Agiles',6,'Informatica',7),(10,'Probabilidad y Estadistica',6,'Matematica',NULL),(11,'Logica',6,'Informatica',4),(12,'Sistemas Digitales',6,'Informatica',8),(13,'Arquitectura de Computadores',6,'Informatica',8),(14,'Redes',6,'Informatica',8),(15,'Ingenieria del Software I',6,'Informatica',7);
+/*!40000 ALTER TABLE `asignaturas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `matriculados`
+--
+
+DROP TABLE IF EXISTS `matriculados`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `matriculados` (
+  `fk_alumno` int NOT NULL,
+  `fk_asignatura` int NOT NULL,
+  PRIMARY KEY (`fk_alumno`,`fk_asignatura`),
+  KEY `notas_alumno_idx` (`fk_alumno`),
+  KEY `notas_asignaturas_idx` (`fk_asignatura`),
+  CONSTRAINT `matriculados_alumnos` FOREIGN KEY (`fk_alumno`) REFERENCES `alumnos` (`id_persona`),
+  CONSTRAINT `matriculados_asignaturas` FOREIGN KEY (`fk_asignatura`) REFERENCES `asignaturas` (`id_asignatura`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `matriculados`
+--
+
+LOCK TABLES `matriculados` WRITE;
+/*!40000 ALTER TABLE `matriculados` DISABLE KEYS */;
+INSERT INTO `matriculados` VALUES (64,1),(64,2),(64,3),(64,4),(65,1),(65,2),(65,3),(66,1),(66,2),(66,4),(67,2),(74,1),(74,2),(75,1),(76,1),(76,2),(77,1),(77,2),(78,1),(78,2),(78,3),(79,1),(79,2),(79,3),(80,2),(80,3),(82,2),(82,3),(83,2),(83,3),(84,2),(84,3),(85,3);
+/*!40000 ALTER TABLE `matriculados` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `personas`
+--
+
+DROP TABLE IF EXISTS `personas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `personas` (
+  `id_persona` int NOT NULL AUTO_INCREMENT,
+  `dni` varchar(9) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `apellido1` varchar(45) NOT NULL,
+  `apellido2` varchar(45) NOT NULL,
+  `telefono` varchar(15) DEFAULT NULL,
+  `direccion` varchar(100) DEFAULT NULL,
+  `ciudad` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id_persona`),
+  UNIQUE KEY `id_persona` (`id_persona`),
+  UNIQUE KEY `dni` (`dni`)
+) ENGINE=InnoDB AUTO_INCREMENT=251 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `personas`
+--
+
+LOCK TABLES `personas` WRITE;
+/*!40000 ALTER TABLE `personas` DISABLE KEYS */;
+INSERT INTO `personas` VALUES (1,'13967823S','María Isabel','Ruiz','Marques','807986539','Madrid','Madrid'),(2,'37536605F','Josefa','Aparicio','Martínez','691410653','Vigo','Pontevedra'),(3,'55289661F','Encarnación','Rovira','Ruano','864923827','Adeje','S.C. de Tenerife'),(4,'55630078R','Amparo','García','Álvarez','210857116','Villarreal','Castellón'),(5,'67278926Q','José','Abad','Valle','221971051','Oleiros','La Coruña'),(6,'29143434L','Juan Carlos','Campillo','Ramos','319736195','Santa Coloma de Gramanet','Barcelona'),(7,'56040749F','Alejandro','López','Villalobos','77248524','Salamanca','Salamanca'),(8,'01792340L','Antonio','Ramírez','García','590096477','Amposta','Tarragona'),(9,'10883513M','José','Sancho','Gutiérrez','516596624','Vitoria','Álava'),(10,'03399466C','Albert','Ibáñez','Silva','504467842','Madrid','Madrid'),(11,'18331564N','Dolores','López','Villaescusa','935519669','Tomelloso','Ciudad Real'),(12,'96729463L','Francisco','Jaime','Oliver','234663406','Murcia','Murcia'),(13,'51358931T','Juan','Arias','Guzmán','38927979','Barcelona','Barcelona'),(14,'77510445P','José Antonio','González','Rueda','627661233','Rubí','Barcelona'),(15,'03907044B','Alberto','Orellana','López','575211893','Marín','Pontevedra'),(16,'93107230X','María Dolores','Martínez','Fernández','280075149','Fuenlabrada','Madrid'),(17,'56034423Y','Julio','Rubio','Castellano','144521083','Las Palmas de G. C.','Las Palmas'),(18,'96141475A','Fernando','Aguilar','Montero','225224520','Burriana','Castellón'),(19,'99959236V','Roberto','Pérez','Corbacho','978576407','Benalmádena','Málaga'),(20,'03209615B','María Rosario','López','Soriano','565931341','Barcelona','Barcelona'),(21,'13410797A','José','Suarez','García','945508089','Martorell','Barcelona'),(22,'30186195Y','Juan Francisco','Espinosa','Matilla','871271911','Madrid','Madrid'),(23,'25007239Y','Alejandro','Zapata','Huerta','44593794','Manises','Valencia'),(24,'40867786Y','Josefa','Burgos','Nieto','5835161','Adeje','S.C. de Tenerife'),(25,'81268932L','Ana Belén','López','García','709524197','Madrid','Madrid'),(26,'19312675N','José','Domingo','Plana','428443570','Molina de Segura','Murcia'),(27,'04957665S','Jorge','Díaz','Martin','754710333','Cornellá de Llobregat','Barcelona'),(28,'91063204V','Francisco','Rodríguez','Hussain','483504476','Sevilla','Sevilla'),(29,'98142504D','María Carmen','Gracia','Muñoz','394192330','Rincón de la Victoria','Málaga'),(30,'02868742K','David','Quiroga','Sarmiento','138114275','Alicante','Alicante'),(31,'78527165J','Bárbara','Sosa','Tudela','76440533','Almería','Almería'),(32,'38627285G','Ángel','Cruz','Sarabia','209341936','Amposta','Tarragona'),(33,'47458585V','Mercedes','Luis','Rodríguez','289532275','Madrid','Madrid'),(34,'64700088F','Ángeles','Rodríguez','Gómez','617036073','Bilbao','Vizcaya'),(35,'41506797P','José','Carrera','Sánchez','117895188','San Roque','Cádiz'),(36,'88837886H','Paula','Martin','Jorda','686684206','Moguer','Huelva'),(37,'01100479K','Isabel','Martos','Muñoz','985943505','Benidorm','Alicante'),(38,'35562931D','José','García','Pérez','552769020','Bilbao','Vizcaya'),(39,'99158635T','Antonio','Folch','Velázquez','629120120','Zarauz','Guipúzcoa'),(40,'27216801G','María Carmen','Perdomo','Sánchez','978361378','Pozuelo de Alarcón','Madrid'),(41,'57805645K','Carmen','Manzanares','Díaz','926785382','Granada','Granada'),(42,'03057394G','Antonia','López','Ocaña','803670136','Parla','Madrid'),(43,'37137990M','María Carmen','Navarro','Muñoz','928664420','Málaga','Málaga'),(44,'84552412L','Ana María','Torres','Reyes','411593044','Marrachí','Islas Baleares'),(45,'04782415W','Raúl','González','Grande','462288337','Málaga','Málaga'),(46,'34549931K','Sonia','Díaz','Valero','79141283','Madrid','Madrid'),(47,'17578110S','José','Sanchís','Aguilera','343089627','Marrachí','Islas Baleares'),(48,'99262647Y','Francisco','González','Del Rey','806431646','Puente Genil','Córdoba'),(49,'86748384C','Jorge','Bazán','López','234394909','Vic','Barcelona'),(50,'77322495Z','Alicia','Rey','Moya','195618733','Valladolid','Valladolid'),(51,'41992625F','Ramón','Mira','Fabra','607202021','Sevilla','Sevilla'),(52,'17859427L','Fernando','Díaz','Roig','776270096','Sabadell','Barcelona'),(53,'53249915Q','Ginés','Ortega','Gutiérrez','284313920','Badalona','Barcelona'),(54,'88906599F','Cristina','Arroyo','Valencia','415533888','Salamanca','Salamanca'),(55,'28640465Z','Carmen','Domínguez','Cano','336318876','Hospitalet de Llobregat','Barcelona'),(56,'83094267M','Miguel','Fernández','Fernández','650253940','Barcelona','Barcelona'),(57,'32367703X','María','Gamiz','Barrero','327955263','Oviedo','Asturias'),(58,'86662787Y','Miguel','Silva','González','378864805','Sant Cugat del Vallés','Barcelona'),(59,'26270475J','Salvador','Osuna','Monge','246834215','Zaragoza','Zaragoza'),(60,'71568595R','Manuela','Álvarez','Buendía','280067111','Las Palmas de G. C.','Las Palmas'),(61,'49359539K','Pilar','Giráldez','Torre','99767462','Madrid','Madrid'),(62,'52913655Q','Concepción','Ribes','Mendoza','374978058','Madrid','Madrid'),(63,'54425879J','María José','Oliver','Rodríguez','226676224','Albacete','Albacete'),(64,'36100596A','Francisco','Navarro','Rodríguez','932046007','Elche','Alicante'),(65,'57173076K','Sergio','Rojas','Gutiérrez','668788399','La Rinconada','Sevilla'),(66,'77909892Z','Antonio','Hernández','Mendoza','318565796','Madrid','Madrid'),(67,'21397324X','María Mar','Delgado','Velasco','33654815','León','León'),(68,'89561128W','José','Torres','Muñoz','772349604','Santa Cruz de Tenerife','S.C. de Tenerife'),(69,'22110623X','Rosario','Carmona','Sola','371749416','Roquetas de Mar','Almería'),(70,'91759077W','Laura','Calvo','Gallego','112092749','Parla','Madrid'),(71,'38654754B','Margarita','López','Carmona','784017766','La Coruña','La Coruña'),(72,'23193051N','Joaquín','Herreros','Felipe','887503098','Alicante','Alicante'),(73,'58717680Z','Luis','Martínez','Fernández','806399250','Barcelona','Barcelona'),(74,'64309430G','Vicente','Diez','Martínez','334058143','Madrid','Madrid'),(75,'41253197Y','Silvia','Sáenz','Soler','89511751','Ribeira','La Coruña'),(76,'80316988E','María Carmen','Lara','Fernández','694200259','Valencia','Valencia'),(77,'23115061S','Carmen','Ferro','Da Silva','384199442','Madrid','Madrid'),(78,'67247370Q','Francisco','Martínez','Rodríguez','51987353','León','León'),(79,'67315169B','María','Martínez','López','529965013','Estepona','Málaga'),(80,'13525176A','Irene','López','Palomo','601449354','Cornellá de Llobregat','Barcelona'),(81,'79114983C','María','Soler','Martínez','657852882','Madrid','Madrid'),(82,'70793791K','Antonio','Escalera','Conde','86160850','Valencia','Valencia'),(83,'73911095C','Ana María','Alcaraz','González','716380501','Soria','Soria'),(84,'91166850W','Mónica','Romera','Martínez','835782154','Cartagena','Murcia'),(85,'62468425B','Ramón','López','Roselló','432436691','Barcelona','Barcelona'),(86,'56452073E','Juan Carlos','Abella','Hernández','694258035','Irun','Guipúzcoa'),(87,'28882974B','Ángel','López','Galván','298972728','Avilés','Asturias'),(88,'99451653K','Mohamed','Bautista','Rodrigo','432159804','Tarrasa','Barcelona'),(89,'12263241D','Juan José','Peral','Mariño','520281996','Albacete','Albacete'),(90,'66236482R','Manuel','Rus','Campo','995919965','Esparreguera','Barcelona'),(91,'21527341P','Joaquín','Iglesias','Navarro','239941650','Collado Villalba','Madrid'),(92,'46116898N','Alberto','Cobo','López','595611945','Burjasot','Valencia'),(93,'88851072W','Teresa','Carrillo','Álvarez','157152385','Hospitalet de Llobregat','Barcelona'),(94,'38015437W','Laura','Grande','Medina','625388094','Marrachí','Islas Baleares'),(95,'30328443E','Emilio','Postigo','Marcos','468002607','Pamplona','Navarra'),(96,'66218042F','Francisca','Fraga','González','263556966','Moncada y Reixach','Barcelona'),(97,'68045128L','Gerard','Matos','Martin','795559177','Barcelona','Barcelona'),(98,'95784793M','José Antonio','Sánchez','Gracia','743611955','Madrid','Madrid'),(99,'93282732E','José Manuel','Martínez','Palma','968594835','Crevillente','Alicante'),(100,'89206628R','Juan José','Romo','Fernández','710794541','Burjasot','Valencia'),(101,'34458528C','Sergi','Pardo','Diez','787743053','Écija','Sevilla'),(102,'99864750S','María Carmen','Castro','Rosales','569967411','Granada','Granada'),(103,'79479350K','Concepción','Torrejón','Vega','739693625','Valencia','Valencia'),(104,'34486715D','Fernando','Segovia','Pons','924472454','Valencia','Valencia'),(105,'19368954X','Manuel','Correa','Vera','907734288','Elche','Alicante'),(106,'82278210B','María Carmen','Vives','Velasco','926699669','Lugo','Lugo'),(107,'82329436Q','María Begoña','Díaz','Álvarez','437685389','Huelva','Huelva'),(108,'65084966A','Juan José','Arnal','Álvarez','975725655','Madrid','Madrid'),(109,'22589934R','Manuela','Martínez','León','599619224','Santa Pola','Alicante'),(110,'18732591B','María','Sánchez','Cabrera','611234639','Leganés','Madrid'),(111,'93981506X','María José','Martin','Muñoz','216885406','Algemesí','Valencia'),(112,'59155626V','Juan Francisco','Sandoval','Menéndez','619711249','Puertollano','Ciudad Real'),(113,'72734240Y','Ana María','Huertas','Carmona','822545360','Vigo','Pontevedra'),(114,'72642325E','Joaquín','Rodríguez','Lillo','50960880','Lorca','Murcia'),(115,'91216134C','María','Galán','Murcia','565348765','Huesca','Huesca'),(116,'06039454E','Francisco','Crespo','Martos','282978892','Sevilla','Sevilla'),(117,'02885664S','Ana','Crespo','Soler','288460347','Sevilla','Sevilla'),(118,'60905020P','Miguel Ángel','Córdoba','Simón','933936838','Albacete','Albacete'),(119,'15386820G','Josefa','Muriel','Hernando','148657092','Marbella','Málaga'),(120,'75703138H','María Pilar','García','Mellado','419053474','Castellón de la Plana','Castellón'),(121,'25165921B','Antonia','Martínez','López','624102470','Gijón','Asturias'),(122,'41741583X','Laura','Granados','Rodríguez','86465935','Ceuta','Ceuta'),(123,'57473444D','María Amparo','Pérez','Herrera','25930816','Granada','Granada'),(124,'10481533L','Montserrat','Morato','Fuentes','714492369','San Fernando','Cádiz'),(125,'28024659X','Julio','Gómez','Quintas','341977943','Oviedo','Asturias'),(126,'03437498X','Montserrat','Núñez','Barroso','67149889','Fuenlabrada','Madrid'),(127,'53263416Q','Diego','Cano','Molina','198046685','Madrid','Madrid'),(128,'63325249Q','Josefa','Jaén','Álvarez','158538291','Madrid','Madrid'),(129,'71867132K','Raúl','Valencia','Pérez','229807644','Castro-Urdiales','Cantabria'),(130,'18812003G','Francisco','Gómez','Casado','939500897','Valencia','Valencia'),(131,'76348899P','María Luisa','Aragón','Lozano','782248522','Torrente','Valencia'),(132,'59914865A','Fernando','Juárez','Cobos','407214137','Valencia','Valencia'),(133,'93900352T','Isabel','Palacios','Aguilar','696832176','Gavá','Barcelona'),(134,'70519672Q','Francisca','Álvarez','Sarmiento','574884404','Arona','S.C. de Tenerife'),(135,'45782618Z','Jorge','Martínez','Romero','651314360','Sevilla','Sevilla'),(136,'51758048K','Fernando','Pérez','Fernández','201013493','Alcira','Valencia'),(137,'19392226Y','José María','Díaz','Gallart','957427407','Gijón','Asturias'),(138,'34921754A','Antonia','Hernández','Jiménez','381999578','Sevilla','Sevilla'),(139,'97015975C','Xabier','Canosa','Sánchez','641145603','Vigo','Pontevedra'),(140,'15750865M','Fernando','Fariña','Morales','743770533','San Sebastián de los Reyes','Madrid'),(141,'94401971N','Dolores','Villegas','Sánchez','361329973','Pozuelo de Alarcón','Madrid'),(142,'15119782L','Francisco Javier','Lago','Hernández','171334968','Ibiza','Islas Baleares'),(143,'69837222E','Yolanda','Gil','García','3394912','Granada','Granada'),(144,'32631418F','María Rocío','Conde','Rusu','522488909','Murcia','Murcia'),(145,'56423011D','Manuela','Carazo','Jiménez','896735337','Alicante','Alicante'),(146,'72731132A','Patricia','Verde','Vargas','335571504','Getafe','Madrid'),(147,'47197983M','Alberto','Sánchez','Giménez','305240825','Aranjuez','Madrid'),(148,'19143561V','Montserrat','Pérez','Martin','779432412','Getafe','Madrid'),(149,'22191140G','Javier','Guerrero','Rodríguez','62048696','Granada','Granada'),(150,'13481388F','Isabel','Morales','Fernández','164033802','Hospitalet de Llobregat','Barcelona'),(151,'07164391Y','Vicente','Luque','Pérez','558204249','Jerez de la Frontera','Cádiz'),(152,'61813675W','Antonio','Lozano','Illescas','129576787','Arrecife','Las Palmas'),(153,'62773100M','María Pilar','Méndez','Varona','438120996','Murcia','Murcia'),(154,'13541082Q','David','Jaramillo','González','158108132','Zaragoza','Zaragoza'),(155,'99218686K','Raúl','Mesa','Fernández','60965813','Bilbao','Vizcaya'),(156,'94697392K','Cristina','Martínez','Salgado','735377548','Sevilla','Sevilla'),(157,'74053510L','Carmen','García','Ortega','423481382','Madrid','Madrid'),(158,'04268480W','Jesús','Muñoz','Morales','427748609','San Sebastián de los Reyes','Madrid'),(159,'60852617E','Joaquín','Jiménez','González','315891416','Móstoles','Madrid'),(160,'36796011J','María Teresa','Reyes','Muñoz','152199695','Olesa de Montserrat','Barcelona'),(161,'01845532N','Laura','Vázquez','Salvador','48771737','Las Palmas de G. C.','Las Palmas'),(162,'28383084A','José Luis','Bosch','Lázaro','556866027','Rentería','Guipúzcoa'),(163,'90618502C','Manuel','Martin','Ruiz','141509172','Alcorcón','Madrid'),(164,'64466684F','Antonio','Amat','Martínez','676880305','Palma de Mallorca','Islas Baleares'),(165,'70566061Z','María Jesús','Rivas','Gutiérrez','587143524','Onteniente','Valencia'),(166,'97840785G','José','Iglesias','Gamero','63804487','Zamora','Zamora'),(167,'81776035H','María Carmen','Navarro','Vidal','927993826','Algemesí','Valencia'),(168,'39788862N','Miguel','Font','Hidalgo','57642590','Calviá','Islas Baleares'),(169,'73893659H','Concepción','Rodríguez','García','743265053','San Pedro del Pinatar','Murcia'),(170,'94587281B','María Carmen','Nogueira','Fernández','603252988','Gerona','Gerona'),(171,'91651106Q','María Dolores','Fernández','Sánchez','772421579','Bilbao','Vizcaya'),(172,'89965383D','Pedro','Martínez','Rodríguez','246733389','Molina de Segura','Murcia'),(173,'38427559X','Francisco','Perdomo','Mendes','736140453','Paterna','Valencia'),(174,'57141312C','María Teresa','Romero','Barreto','766068381','Reus','Tarragona'),(175,'15653779W','José Manuel','Soto','Martin','930035456','Sevilla','Sevilla'),(176,'94560296M','Juan','López','Gómez','776058520','Getafe','Madrid'),(177,'46465058K','Miguel','Catalá','Carrascosa','374793061','Los Palacios y Villafranca','Sevilla'),(178,'70900156B','María Rosario','Ruiz','Muñoz','136541755','Gáldar','Las Palmas'),(179,'81902776Y','Juan Antonio','Álvarez','Esteban','221156070','Barcelona','Barcelona'),(180,'62622016P','Antonio','Martínez','Mateo','973089815','Fuengirola','Málaga'),(181,'01864143Q','Rafaela','Zorrilla','Navas','498302131','Pinto','Madrid'),(182,'92032724H','Rocío','Marín','Mena','709932437','Oviedo','Asturias'),(183,'82225055D','Jesús','Toledo','Bautista','3997412','Sevilla','Sevilla'),(184,'70690972N','Miguel','Martínez','Mohamed','686559173','San Felíu de Guixols','Gerona'),(185,'31165333B','Víctor','Ruiz','Quintana','8647868','San Sebastián','Guipúzcoa'),(186,'66779313D','Montserrat','Muñoz','Souto','985277211','Alcalá de Henares','Madrid'),(187,'70548151K','Francisco','Santos','Miranda','642436475','Madrid','Madrid'),(188,'51092109R','Laura','Linares','Dios','338798403','Pamplona','Navarra'),(189,'12479881N','María Jesús','Martin','Pérez','655241659','Marbella','Málaga'),(190,'52359074B','Juan','Dorado','Marco','400406179','Barcelona','Barcelona'),(191,'93584067B','Antonio','Piña','Mera','710542749','Onda','Castellón'),(192,'44456436N','Tomas','Márquez','Miranda','896656899','Gerona','Gerona'),(193,'82898682N','Eduardo','Ruiz','Martínez','641596625','Caravaca de la Cruz','Murcia'),(194,'22125289W','Pilar','Carpintero','Pérez','120424059','Madrid','Madrid'),(195,'10087957L','Antonio','Jiménez','López','513687776','Fuenlabrada','Madrid'),(196,'76359593F','Alberto','Sanmartín','Pla','676251503','Tarragona','Tarragona'),(197,'55259493S','María Jesús','Canales','González','225588848','Las Palmas de G. C.','Las Palmas'),(198,'09297312E','María','Cutillas','Pérez','199924860','Madrid','Madrid'),(199,'74176555Z','Javier','Cubillo','Aguirre','768272990','Burgos','Burgos'),(200,'02191436L','Rafael','García','Fernández','797863346','Alcalá la Real','Jaén'),(201,'01546907L','María','Ortiz','Reyes','244946945','Loja','Granada'),(202,'01311645R','José','Morgado','Pulido','473222127','Barcelona','Barcelona'),(203,'71332011H','Alba','Aguilar','Martínez','786698190','Pilar de la Horadada','Alicante'),(204,'97604762F','José','Moreno','Casanova','688266743','Los Barrios','Cádiz'),(205,'53076299G','María José','Ruiz','Barba','996784692','Benalmádena','Málaga'),(206,'69893542S','Luis','Sánchez','García','744508743','San Cristóbal de la Laguna','S.C. de Tenerife'),(207,'48739723D','Lucia','Estepa','Chinchilla','174604178','Madrid','Madrid'),(208,'67505622R','Alicia','Rodríguez','Ramón','616900973','Puertollano','Ciudad Real'),(209,'68516112D','Rosa','Jurado','Guirado','149681167','Madrid','Madrid'),(210,'33443900Z','María Ángeles','Roque','Pérez','291833702','Estepona','Málaga'),(211,'68200457Y','José Antonio','Mariño','Arrieta','197710118','Córdoba','Córdoba'),(212,'52844410R','Dolores','García','González','129989202','Gijón','Asturias'),(213,'16509078T','María Mar','Fariña','Pérez','690404053','Almería','Almería'),(214,'21329062N','Javier','González','Guerra','947774472','El Prat de Llobregat','Barcelona'),(215,'15114429W','Cristina','Cruz','Silva','794078774','Ciempozuelos','Madrid'),(216,'99542660V','Ignacio','Freire','López','557526739','Alicante','Alicante'),(217,'40543755E','Juan Manuel','López','Martínez','446299362','Paterna','Valencia'),(218,'35259960V','Rafael','García','Manso','461947503','Madrid','Madrid'),(219,'54133376R','María Antonia','Pérez','Requena','760308589','Leganés','Madrid'),(220,'01023843K','Marta','Velasco','Freire','288335942','Martos','Jaén'),(221,'90457539B','Dolores','López','Aguilar','635605886','Sitges','Barcelona'),(222,'49199403B','David','Conejero','Solís','481488628','Esplugas de Llobregat','Barcelona'),(223,'32722044J','Laura','Simón','Lorenzo','427831246','Leganés','Madrid'),(224,'28911991W','María','Rico','Domingo','795396309','Madrid','Madrid'),(225,'44731269H','María Isabel','Luque','Beltrán','262048928','Alcobendas','Madrid'),(226,'07255463K','Elena','Sobrino','Sánchez','820363132','Barcelona','Barcelona'),(227,'54732007B','María','Escribano','Chica','228459432','Salou','Tarragona'),(228,'20033976X','Dolores','Verdú','López','957461295','Madrid','Madrid'),(229,'31205937C','Josefa','Aparicio','Navarro','135630005','Santa Pola','Alicante'),(230,'24685230C','Alicia','Frías','Calero','959818714','Barcelona','Barcelona'),(231,'56295592X','Encarnación','Escobar','Sánchez','15885801','Andújar','Jaén'),(232,'92265945L','Rafael','García','Navas','663462068','Madrid','Madrid'),(233,'41340781Y','Antonio','Rojas','Calvo','462807369','Basauri','Vizcaya'),(234,'00385233Y','Antonio','Gómez','Hernández','822181686','El Puerto de Santa María','Cádiz'),(235,'55017261L','Sara','Lozano','Domínguez','456185993','Murcia','Murcia'),(236,'77593555L','Jesús','Roselló','Díaz','267898968','Burgos','Burgos'),(237,'56729562Q','Pedro','Martin','Barrio','984406742','Badalona','Barcelona'),(238,'81636736F','Teresa','Gómez','Ibáñez','292637661','Fuengirola','Málaga'),(239,'74179463R','Félix','Rodríguez','López','700455162','Sant Cugat del Vallés','Barcelona'),(240,'88161654D','María Carmen','Lago','Leal','674909409','Sevilla','Sevilla'),(241,'33763449R','Miguel','Cerro','Piñero','519182600','Madrid','Madrid'),(242,'43897049P','Ángel','Martínez','Peiro','790284999','Parla','Madrid'),(243,'02496401G','Beatriz','Linares','Cueto','342771861','Granada','Granada'),(244,'68096098K','Juan Manuel','Alonso','Moreno','400100642','Madrid','Madrid'),(245,'95649519V','Teresa','Cortes','Corpas','516965729','Tarrasa','Barcelona'),(246,'60061426P','José Luis','Escudero','Diez','221443359','Barcelona','Barcelona'),(247,'73720906H','Montserrat','Ortega','López','554732548','Elche','Alicante'),(248,'40213406E','José','Duran','Gómez','546928460','Arrecife','Las Palmas'),(249,'91769718V','María Pilar','Muñoz','Álvarez','399048084','Móstoles','Madrid'),(250,'71318131F','Ana Belén','Soares','Mateos','659557744','Moncada y Reixach','Barcelona');
+/*!40000 ALTER TABLE `personas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `profesores`
+--
+
+DROP TABLE IF EXISTS `profesores`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `profesores` (
+  `id_persona` int NOT NULL,
+  `nro_seg_social` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_persona`),
+  UNIQUE KEY `nro_seg_social_UNIQUE` (`nro_seg_social`),
+  CONSTRAINT `fk_profesores_personas1` FOREIGN KEY (`id_persona`) REFERENCES `personas` (`id_persona`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `profesores`
+--
+
+LOCK TABLES `profesores` WRITE;
+/*!40000 ALTER TABLE `profesores` DISABLE KEYS */;
+INSERT INTO `profesores` VALUES (45,'203433813'),(49,'214468559'),(16,'216896980'),(44,'234513575'),(3,'239063814'),(7,'245795757'),(20,'320749511'),(23,'336418961'),(32,'350633370'),(39,'370506193'),(13,'389481706'),(6,'402636164'),(27,'448986524'),(48,'458069804'),(37,'488466139'),(21,'507987619'),(30,'512523886'),(12,'524537384'),(28,'533439496'),(47,'544656793'),(15,'544847324'),(46,'545281817'),(42,'559057545'),(1,'564496616'),(41,'591826863'),(2,'593128202'),(14,'602265086'),(43,'650756879'),(36,'664351349'),(5,'666974809'),(19,'673017353'),(25,'686006733'),(11,'688859340'),(26,'715718174'),(50,'760473676'),(34,'784062376'),(38,'785725071'),(40,'787487030'),(31,'789190765'),(9,'794117753'),(22,'822946640'),(4,'839055223'),(10,'852688852'),(18,'863416158'),(29,'895600966'),(24,'927651900'),(33,'929836708'),(17,'959976221'),(8,'986608641'),(35,'997998352');
+/*!40000 ALTER TABLE `profesores` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-12-12  0:34:27

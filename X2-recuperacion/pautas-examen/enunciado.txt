@@ -1,0 +1,30 @@
+Se pide desarrollar una solución que permita la gestión de cuentas, tarjetas y sus movimientos de los clientes de un banco. Se parte de la base de datos suministrada junto al examen. Se deben separar las capas lógicas de la aplicación, “persistencia” y  “negocio”.
+
+MODELO
+Para el modelo, debe tenerse en cuenta las siguientes indicaciones:
+-	Entre los clientes y las cuentas debe existir una relación unidireccional.
+-	Entre las cuentas y las tarjetas debe existir una relación bidireccional.
+-	Entre las tarjetas y los movimientos debe existir una relación bidireccional.
+-	Para las clases del modelo siembre se considerará la igualdad basada en el id de cada uno, lo mismo para el orden natural que debe ser implementado.
+
+MAPEO
+Para el mapeo correcto, debe tenerse en cuenta las siguientes indicaciones:
+-	En Movimiento, la mejor forma de declarar la fecha es:
+	private LocalDate fecha;
+y no hace falta ninguna anotación para el mapeo de JPA
+
+CAPA DE PERISTENCIA
+Se solicita desarrollar los DAO’s solicitados utilizando JPA e Hibernate e implementando las interfaces que se entregan. Los métodos de las interfaces se entregan documentados con la funcionalidad a implementar en cada uno.
+La base de datos a utilizar es “92_ex_rec_banco” y el script de creación se entrega en el examen.
+
+•	Medios para su realización:
+o	Se utilizará el ordenador sin conexión a internet.
+o	Se pueden consultar los ejemplos realizados en clase.
+
+•	Instrucciones
+o	Se debe crear un proyecto nuevo en Eclipse con el nombre “recuperacionApeNom”.
+o	El paquete base será es.cursoalcobendas.recuperacion.
+o	Todas las clases que implementen una de las interfaces entregadas deberá llamarse igual que la interfaz con el sufijo ‘Impl’. 
+o	Para la gestión de “dependencias” se deberá utilizar Maven.
+
+IMPORTANTE: No puede modificarse ninguna de las interfaces.

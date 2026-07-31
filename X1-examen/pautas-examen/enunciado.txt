@@ -1,0 +1,27 @@
+Se pide desarrollar una solución que permita la gestión de asignaturas, alumnos, profesores y matriculaciones de una Universidad. Se parte de la base de datos suministrada junto al examen. Se deben separar las capas lógicas de la aplicación, “persistencia” y  “negocio”.
+
+MODELO
+Para el modelo, debe tenerse en cuenta las siguientes indicaciones:
+-	Entre los alumnos y las asignaturas debe existir una relación bidireccional.
+-	Entre los profesores y las asignaturas debe existir una relación unidireccional del lado de la asignatura.
+-	Dos personas son iguales si tienen el mismo id. Su orden natural es ascendente por id.
+-	Dos asignaturas son iguales si tienen el mismo id. Su orden natural es ascendente por id.
+
+CAPA DE PERISTENCIA
+Se solicita desarrollar los DAO’s solicitados utilizando JPA e Hibernate e implementando las interfaces que se entregan. Los métodos de las interfaces se entregan documentados con la funcionalidad a implementar en cada uno.
+La base de datos a utilizar es “91_ex_universidad” cuyo script de creación se entrega en el examen.
+
+CAPA DE NEGOCIO
+Se solicita implementar la/s interfaces que se entregan correspondientes a la capa de negocio.
+
+•	Medios para su realización:
+o	Se utilizará el ordenador sin conexión a internet.
+o	Se pueden consultar los ejemplos realizados en clase.
+
+•	Instrucciones
+o	Se debe crear un proyecto nuevo en Eclipse con el nombre “examenApeNom”.
+o	El paquete base será es.cursoalcobendas.examen.
+o	Todas las clases que implementen una de las interfaces entregadas deberá llamarse igual que la interfaz con el sufijo ‘Impl’. Ej. interfaz ‘AsignaturaDao’ su implementación será ‘AsignaturaDaoImpl’.
+o	Para la gestión de “dependencias” se deberá utilizar Maven.
+
+IMPORTANTE: No puede modificarse ninguna de las interfaces.
